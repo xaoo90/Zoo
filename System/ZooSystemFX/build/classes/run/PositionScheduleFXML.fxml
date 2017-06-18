@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="BorderPane" prefHeight="240.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="run.PositionScheduleFXML">
+    <center>
+        <HBox alignment="CENTER" prefWidth="972.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox fx:id="boxWorkShirts" layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="15.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" top="40.0" />
+                    </HBox.margin>
+                </VBox>
+                <Separator orientation="VERTICAL">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="boxDay1" alignment="CENTER" prefWidth="130.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </VBox>
+                <Separator layoutX="99.0" layoutY="10.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="0.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="boxDay2" alignment="CENTER" prefWidth="130.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </VBox>
+                <Separator layoutX="232.0" layoutY="10.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="0.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="boxDay3" alignment="CENTER" prefWidth="130.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </VBox>
+                <Separator layoutX="365.0" layoutY="10.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="0.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="boxDay4" alignment="CENTER" prefWidth="130.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </VBox>
+                <Separator layoutX="496.0" layoutY="10.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="0.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="boxDay5" alignment="CENTER" layoutX="310.0" layoutY="10.0" prefWidth="130.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </VBox>
+                <Separator layoutX="626.0" layoutY="10.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="0.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="boxDay6" alignment="CENTER" layoutX="110.0" layoutY="10.0" prefWidth="130.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </VBox>
+                <Separator layoutX="750.0" layoutY="10.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="0.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="boxDay7" alignment="CENTER" layoutX="210.0" layoutY="10.0" prefWidth="130.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets bottom="20.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox prefHeight="30.0" prefWidth="972.0" BorderPane.alignment="CENTER" />
+    </bottom>
+    <top>
+        <VBox prefHeight="7.0" prefWidth="972.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="lblPosition">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Separator prefHeight="0.0" prefWidth="972.0" />
+            </children>
+        </VBox>
+    </top>
+</BorderPane>

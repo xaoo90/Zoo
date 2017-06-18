@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.HolidayAllFXML">
+   <top>
+      <Label prefHeight="31.0" prefWidth="73.0" text="Urlopy" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addHolidayRequest" prefWidth="90.0" text="Dodaj prośbe" />
+            <Button mnemonicParsing="false" onAction="#delHoliday" prefWidth="90.0" text="Usuń prośbe" />
+         </children></HBox>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            <Tab text="Aktualne urlopy">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayCurrent" prefHeight="500.0" prefWidth="1000.0">
+                           <columns>
+                              <TableColumn fx:id="dayCurrent" prefWidth="250.0" resizable="false" text="Liczba Dni" />
+                              <TableColumn fx:id="holidayStartCurrent" prefWidth="250.0" resizable="false" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndCurrent" prefWidth="250.0" resizable="false" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeCurrent" prefWidth="250.0" resizable="false" text="Uzasadnienie" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Historia urlopów">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayHistory" layoutX="39.0" layoutY="28.0" prefHeight="500.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                              <TableColumn fx:id="dayHistory" prefWidth="250.0" resizable="false" text="Liczba Dni" />
+                            <TableColumn fx:id="holidayStartHistory" prefWidth="250.0" resizable="false" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndHistory" prefWidth="250.0" resizable="false" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeHistory" prefWidth="250.0" resizable="false" text="Uzasadnienie" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Przyszłe urlopy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayFuture" prefHeight="500.0" prefWidth="1000.0">
+                           <columns>
+                              <TableColumn fx:id="dayFuture" prefWidth="85.0" text="Liczba Dni" />
+                              <TableColumn fx:id="holidayStartFuture" prefWidth="238.0" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndFuture" prefWidth="215.0" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeFuture" prefWidth="201.0" text="Uzasadnienie" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Prośby o urlop">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayRequest" prefHeight="500.0" prefWidth="1000.0">
+                           <columns>
+                              <TableColumn fx:id="dayRequest" prefWidth="85.0" text="Liczba Dni" />
+                              <TableColumn fx:id="holidayStartRequest" prefWidth="238.0" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndRequest" prefWidth="214.0" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeRequest" prefWidth="246.0" resizable="false" text="Uzasadnienie" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

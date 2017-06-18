@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.workSchedule.WorkScheduleFXML">
+   <top>
+      <Label text="Grafik" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Dziś">
+               <content>
+                  <BorderPane fx:id="bp" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+          </Tab>
+          <Tab text="Tydzień">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <ScrollPane prefHeight="600.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <content>
+                              <BorderPane prefHeight="485.0" prefWidth="972.0">
+                                 <center>
+                                    <VBox fx:id="boxWeek" prefHeight="527.0" prefWidth="972.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </content>
+                        </ScrollPane>
+                     </center>
+                     <top>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1 - pierwsza zmian" textFill="RED">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2 - druga zmiana" textFill="RED">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top></BorderPane>
+               </content>
+          </Tab>
+            <Tab text="Historia">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <TableView fx:id="tablEmployeeSchedule" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="esDate" prefWidth="150.0" text="Data rozpoczęcia zmiany" />
+                            <TableColumn fx:id="esShifts" minWidth="0.0" prefWidth="149.0" text="Zmiana" />
+                              <TableColumn fx:id="esPosition" prefWidth="145.0" text="Stanowisko" />
+                              <TableColumn fx:id="esEmployee" prefWidth="195.0" text="Pracownik" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </center>
+                     <top>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Grafik z dnia">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="pickerWorkDateHistory" editable="false" onAction="#showHistorySchedule" />
+                              <Button mnemonicParsing="false" onAction="#clearDatePicker" text="Cała historia" />
+                           </children>
+                        </HBox>
+                     </top>
+                     <bottom>
+                        <HBox alignment="CENTER" prefHeight="30.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#editWorkSchedule" text="Edytuj grafik" />
+                           </children>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Ustal grafik">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1 - pierwsza zmiana" textFill="RED">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2 - druga zmiana" textFill="RED">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="pickerPlanning" onAction="#setDate" prefHeight="25.0" prefWidth="164.0">
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <ComboBox fx:id="comboPosition" onAction="#showPlanningSchedule" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                     <center>
+                        <ScrollPane prefHeight="600.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <content>
+                              <BorderPane prefHeight="485.0" prefWidth="972.0">
+                                 <center>
+                                    <VBox fx:id="boxPlanning" prefHeight="527.0" prefWidth="972.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </content>
+                        </ScrollPane>
+                     </center>
+                     <bottom>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="972.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addSchedule" text="Zatwierdź" />
+                           </children>
+                        </HBox>
+                     </bottom></BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

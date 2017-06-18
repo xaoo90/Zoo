@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="497.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.cage.AddCageFXML">
+   <children>
+      <ListView fx:id="listSector" layoutX="14.0" layoutY="39.0" prefHeight="349.0" prefWidth="203.0" />
+      <Separator layoutX="221.0" layoutY="1.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="6.0" />
+      <GridPane layoutX="227.0" layoutY="303.0" prefHeight="34.0" prefWidth="262.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="92.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Liczba miejsc :" />
+            <TextField fx:id="txtSpace" maxWidth="70.0" prefHeight="25.0" prefWidth="68.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" layoutX="224.0" layoutY="352.0" prefHeight="34.0" prefWidth="268.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addCage" prefWidth="65.0" text="Dodaj" />
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="65.0" text="Anuluj" />
+         </children>
+      </HBox>
+      <Label layoutX="88.0" layoutY="14.0" text="Sektory">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listCageType" layoutX="227.0" layoutY="39.0" prefHeight="256.0" prefWidth="262.0" />
+      <Label layoutX="307.0" layoutY="14.0" text="Rodzaje klatek">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

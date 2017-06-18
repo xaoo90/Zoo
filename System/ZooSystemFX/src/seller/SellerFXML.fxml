@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seller.SellerFXML">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1000.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="408.0" layoutY="18.0" mnemonicParsing="false" onAction="#showTicketMachine" prefHeight="45.0" prefWidth="100.0" text="Kasa" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="125.0" layoutY="18.0" mnemonicParsing="false" onAction="#showTodaySchedule" prefHeight="45.0" prefWidth="100.0" text="Grafik&#10;na dziś" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showAllHoliday" prefHeight="45.0" prefWidth="100.0" text="Moje&#10;urlopy" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#showMySchedule" prefHeight="45.0" prefWidth="100.0" text="Moje&#10;dni pracy" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showMyProfile" prefHeight="45.0" prefWidth="100.0" text="Moje&#10;konto" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="45.0" prefWidth="100.0" text="Wyloguj">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="110.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

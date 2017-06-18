@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.ManagerFXML">
+   <top>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="1000.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#showEmployee" prefHeight="45.0" prefWidth="100.0" text="Zarzadzanie &#10;pracownikami" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#showWorkSchedule" prefHeight="45.0" prefWidth="100.0" text="Zarządzanie &#10;grafikiem" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#showHoliday" prefHeight="45.0" prefWidth="100.0" text="Zarządzanie &#10;urlopami" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#showSector" prefHeight="45.0" prefWidth="100.0" text="Zarządzanie &#10;sektorami" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showCage" prefHeight="45.0" prefWidth="100.0" text="Zarządzanie&#10;klatkami" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#showAnimal" prefHeight="45.0" prefWidth="100.0" text="Zarządzanie&#10;zwierzętami" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showWarehouse" prefHeight="45.0" prefWidth="100.0" text="Zarządzanie&#10;magazynami" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#showOrderFeed" prefHeight="45.0" prefWidth="100.0" text="Zarządzanie&#10;zamówieniami" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#showTicket" prefHeight="45.0" prefWidth="100.0" text="Statystyka&#10;sprzedaży biletów" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="45.0" prefWidth="100.0" text="Wyloguj">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

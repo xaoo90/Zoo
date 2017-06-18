@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehousemen.order.OrderFeedFXML">
+   <top>
+      <Label text="Zamówienia" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Historia zamówień">
+               <content>
+                  <BorderPane prefHeight="200.0">
+                     <left>
+                        <TableView fx:id="tableOrderFeedHistory" prefHeight="530.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="orderFeedIdHistory" prefWidth="75.0" text="Numer&#10;zamówienia" />
+                              <TableColumn fx:id="orderFeedDateHistory" prefWidth="102.0" text="Data &#10;zamówienia" />
+                              <TableColumn fx:id="orderFeedEmplHistory" prefWidth="96.0" text="Zamawiający" />
+                              <TableColumn fx:id="orderFeedSumHistory" prefWidth="75.0" text="Cena&#10;zamówienia" />
+                           </columns>
+                        </TableView>
+                     </left>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <Label text="Pozycje zamówienia" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <left>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+                           </left>
+                           <center>
+                              <TableView fx:id="tablePositionHistory" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="positionFeedHistory" prefWidth="135.0" text="Produkt" />
+                                    <TableColumn fx:id="positionAmountHistory" prefWidth="77.0" text="Ilość" />
+                                    <TableColumn fx:id="positionPriceHistory" prefWidth="127.0" text="Cena jednostkowa" />
+                                    <TableColumn fx:id="positionPriceAllHistory" prefWidth="108.0" text="Suma" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </center>
+                        </BorderPane>
+                     </center></BorderPane>
+               </content>
+            </Tab>
+          <Tab text="Zamówienia oczekujące">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+                           </left>
+                           <center>
+                              <TableView fx:id="tablePosition" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="positionFeed" prefWidth="135.0" text="Produkt" />
+                                    <TableColumn fx:id="positionAmount" prefWidth="77.0" text="Ilość" />
+                                    <TableColumn fx:id="positionPrice" prefWidth="127.0" text="Cena jednostkowa" />
+                                    <TableColumn fx:id="positionPriceAll" prefWidth="108.0" text="Suma" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </center>
+                           <top>
+                              <Label text="Pozycje zamówienia" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <bottom>
+                              <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#pricePosition" text="Wprowadzenie cen produktów" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                     <left>
+                        <BorderPane BorderPane.alignment="CENTER">
+                           <center>
+                              <TableView fx:id="tableOrderFeed" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="orderFeedId" prefWidth="75.0" text="Numer&#10;zamówienia" />
+                                    <TableColumn fx:id="orderFeedDate" prefWidth="102.0" text="Data &#10;zamówienia" />
+                                    <TableColumn fx:id="orderFeedEmpl" prefWidth="96.0" text="Zamawiający" />
+                                 </columns>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <HBox alignment="CENTER" prefHeight="30.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#acceptOrder" text="Zatwierdź zlecenie" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </left></BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

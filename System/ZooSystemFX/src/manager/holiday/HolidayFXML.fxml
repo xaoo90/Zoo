@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.holiday.HolidayFXML">
+   <top>
+      <Label prefHeight="31.0" prefWidth="73.0" text="Urlopy" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addHoliday" prefWidth="80.0" text="Dodaj urlop" />
+         </children></HBox>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            <Tab text="Aktualne urlopy">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayCurrent" prefHeight="500.0" prefWidth="1000.0">
+                           <columns>
+                              <TableColumn fx:id="holidayEmplCurrent" prefWidth="258.0" resizable="false" text="Pracownik" />
+                              <TableColumn fx:id="dayCurrent" prefWidth="85.0" resizable="false" text="Liczba Dni" />
+                              <TableColumn fx:id="holidayStartCurrent" prefWidth="238.0" resizable="false" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndCurrent" prefWidth="215.0" resizable="false" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeCurrent" prefWidth="201.0" resizable="false" text="Uzasadnienie" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Historia urlopów">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayHistory" layoutX="39.0" layoutY="28.0" prefHeight="500.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="holidayEmplHistory" prefWidth="258.0" resizable="false" text="Pracownik" />
+                              <TableColumn fx:id="dayHistory" prefWidth="85.0" resizable="false" text="Liczba Dni" />
+                            <TableColumn fx:id="holidayStartHistory" prefWidth="238.0" resizable="false" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndHistory" prefWidth="215.0" resizable="false" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeHistory" prefWidth="201.0" resizable="false" text="Uzasadnienie" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Przyszłe urlopy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayFuture" prefHeight="500.0" prefWidth="1000.0">
+                           <columns>
+                              <TableColumn fx:id="holidayEmplFuture" prefWidth="258.0" text="Pracownik" />
+                              <TableColumn fx:id="dayFuture" prefWidth="85.0" text="Liczba Dni" />
+                              <TableColumn fx:id="holidayStartFuture" prefWidth="238.0" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndFuture" prefWidth="215.0" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeFuture" prefWidth="201.0" text="Uzasadnienie" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab" text="Prośby o urlop">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablHolidayRequest" prefHeight="500.0" prefWidth="796.0">
+                           <columns>
+                              <TableColumn fx:id="holidayEmplRequest" prefWidth="202.0" text="Pracownik" />
+                              <TableColumn fx:id="dayRequest" prefWidth="102.0" text="Liczba Dni" />
+                              <TableColumn fx:id="holidayStartRequest" prefWidth="132.0" text="Data rozpoczęcia" />
+                              <TableColumn fx:id="holidayEndRequest" prefWidth="108.0" text="Data zakończenia" />
+                              <TableColumn fx:id="holidayTypeRequest" prefWidth="251.0" text="Uzadadnienie" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER" layoutX="796.0" layoutY="447.0" prefHeight="39.0" prefWidth="200.0" spacing="40.0" />
+                        <Button fx:id="btnOk" layoutX="810.0" layoutY="15.0" mnemonicParsing="false" onAction="#acceptHolidey" prefHeight="170.0" prefWidth="170.0" text="Akceptuj" />
+                        <Button fx:id="btnCan" layoutX="810.0" layoutY="316.0" mnemonicParsing="false" onAction="#cancelHolidey" prefHeight="170.0" prefWidth="170.0" text="Odrzuć" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

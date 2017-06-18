@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.employee.EditEmplFXML">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#editEmployee" prefWidth="80.0" text="Edytuj" />
+            <Button mnemonicParsing="false" onAction="#clear" prefWidth="80.0" text="Wyczyść" />
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="80.0" text="Anuluj" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <GridPane prefHeight="448.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="271.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Login" />
+            <Label text="Imię" GridPane.rowIndex="1" />
+            <Label text="Nazwisko" GridPane.rowIndex="2" />
+            <Label text="Stanowisko" GridPane.rowIndex="3" />
+            <Label text="Data zatrudnienia" GridPane.rowIndex="4" />
+            <Label text="Koniec umowy" GridPane.rowIndex="5" />
+            <Label text="Wynagrodzenie" GridPane.rowIndex="6" />
+            <Label text="NRB" GridPane.rowIndex="7" />
+            <Label text="e-mail" GridPane.rowIndex="8" />
+            <Label text="Status" GridPane.rowIndex="9" />
+            <TextField fx:id="txtLogin" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+            <TextField fx:id="txtFname" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtLname" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtSalary" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtBAN" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="txtMail" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <DatePicker fx:id="empDate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <DatePicker fx:id="endDate" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="choicePosition" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="choiceCondition" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <HBox prefHeight="20.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <HBox prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <HBox prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

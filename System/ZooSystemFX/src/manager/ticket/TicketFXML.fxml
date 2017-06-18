@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.ticket.TicketFXML">
+   <top>
+      <Label prefHeight="31.0" text="Bilety" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Sprzedaż według typu">
+               <content>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane maxHeight="527.0" maxWidth="271.0" minHeight="527.0" minWidth="271.0" prefHeight="527.0" prefWidth="271.0">
+                           <children>
+                              <TableView fx:id="tableTicketType" layoutX="32.0" layoutY="26.0" prefHeight="435.0" prefWidth="271.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+                                <columns>
+                                  <TableColumn fx:id="ticketTypeName" prefWidth="75.0" text="Nazwa" />
+                                  <TableColumn fx:id="ticketTypePrice" prefWidth="75.0" text="Cena" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="-2.0" layoutY="462.0" prefHeight="65.0" prefWidth="275.0" spacing="20.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addTicketType" text="Dodaj&#10;typ biletu" textAlignment="CENTER" />
+                                    <Button mnemonicParsing="false" onAction="#editTicketType" text="Edytuj&#10;typ biletu" textAlignment="CENTER" />
+                                    <Button mnemonicParsing="false" onAction="#delTicketType" text="Usuń&#10;typ biletu" textAlignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="96.0" layoutY="4.0" text="Typy biletów">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="tableTicket" prefHeight="527.0" prefWidth="723.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="ticketDate" prefWidth="75.0" text="Data wystawienia" />
+                                  <TableColumn fx:id="ticketAmount" prefWidth="75.0" text="Liczba biletów" />
+                                    <TableColumn fx:id="ticketCost" prefWidth="75.0" text="Końcowa cena" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+          <Tab text="Sprzedaż według daty">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Dzień">
+                           <content>
+                              <SplitPane dividerPositions="0.289" prefHeight="160.0" prefWidth="200.0">
+                                <items>
+                                    <BorderPane prefHeight="501.0" prefWidth="272.0">
+                                       <center>
+                                          <TableView fx:id="tableTicketDateDay" prefHeight="476.0" prefWidth="295.0" BorderPane.alignment="CENTER">
+                                            <columns>
+                                              <TableColumn fx:id="ticketTypeDateDay" prefWidth="130.0" text="Typ biletu" />
+                                                <TableColumn fx:id="ticketAmountDateDay" prefWidth="65.0" text="Liczba" />
+                                                <TableColumn fx:id="ticketCostDateDay" prefWidth="95.0" text="Suma" />
+                                            </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <DatePicker fx:id="dateIssued" onAction="#dayTicket" prefHeight="25.0" prefWidth="174.0" BorderPane.alignment="CENTER" />
+                                       </top>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                            <tabs>
+                                              <Tab text="Liczba biletów [liczba]">
+                                                   <content>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <center>
+                                                            <BarChart fx:id="barAmountDay" prefHeight="501.0" prefWidth="657.0" title="Liczba biletów" BorderPane.alignment="CENTER">
+                                                              <xAxis>
+                                                                <CategoryAxis label="Rodaje biletów" side="BOTTOM" />
+                                                              </xAxis>
+                                                              <yAxis>
+                                                                <NumberAxis label="Liczba biletów" side="LEFT" />
+                                                              </yAxis>
+                                                            </BarChart>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </content>
+                                                </Tab>
+                                              <Tab text="Wartość biletów [liczba]">
+                                                   <content>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <center>
+                                                            <BarChart fx:id="barCostDay" title="Wartość biletów" BorderPane.alignment="CENTER">
+                                                              <xAxis>
+                                                                <CategoryAxis label="Rodzaje biletów" side="BOTTOM" />
+                                                              </xAxis>
+                                                              <yAxis>
+                                                                <NumberAxis label="Wartość [ zł ]" side="LEFT" />
+                                                              </yAxis>
+                                                            </BarChart>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab text="Liczba biletów [%]">
+                                                   <content>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <center>
+                                                            <PieChart fx:id="pieAmountDay" legendVisible="false" prefHeight="472.0" prefWidth="471.0" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <left>
+                                                            <ListView fx:id="listAmount" prefHeight="472.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                                                         </left>
+                                                      </BorderPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab text="Wartość biletów [%]">
+                                                   <content>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <center>
+                                                            <PieChart fx:id="pieCostDay" legendVisible="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <left>
+                                                            <ListView fx:id="listCost" prefHeight="472.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                                                         </left>
+                                                      </BorderPane>
+                                                   </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </center>
+                                    </BorderPane>
+                                </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                      <Tab text="Miesiąc">
+                           <content>
+                              <SplitPane dividerPositions="0.289" prefHeight="160.0" prefWidth="200.0">
+                                 <items>
+                                    <BorderPane prefHeight="501.0" prefWidth="395.0">
+                                       <center>
+                                          <TableView fx:id="tableTicketDateMonth" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <columns>
+                                              <TableColumn fx:id="ticketTypeDateMonth" prefWidth="130.0" text="Typ biletu" />
+                                              <TableColumn fx:id="ticketAmountDateMonth" prefWidth="65.0" text="Liczba" />
+                                                <TableColumn fx:id="ticketCostDateMonth" prefWidth="95.0" text="Suma" />
+                                            </columns>
+                                             <BorderPane.margin>
+                                                <Insets />
+                                             </BorderPane.margin>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <HBox alignment="CENTER" prefHeight="55.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <ComboBox fx:id="comboYear" onAction="#yearTicket" prefWidth="90.0" />
+                                                <ComboBox fx:id="comboMonth" onAction="#monthTicket" prefWidth="150.0" />
+                                             </children>
+                                          </HBox>
+                                       </top></BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                            <tabs>
+                                              <Tab text="Statystyki roku">
+                                                   <content>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <center>
+                                                            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                                               <tabs>
+                                                                  <Tab text="Liczba biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <BarChart fx:id="barAmountYear" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </BarChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Wartość biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <BarChart fx:id="barCostYear" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </BarChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Liczba biletów [%]">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <left>
+                                                                              <ListView fx:id="listAmountYear" prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                                                                           </left>
+                                                                           <center>
+                                                                              <PieChart fx:id="pieAmountYear" BorderPane.alignment="CENTER" />
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Wartość biletów [%]">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <left>
+                                                                              <ListView fx:id="listCostYear" prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                                                                           </left>
+                                                                           <center>
+                                                                              <PieChart fx:id="pieCostYear" BorderPane.alignment="CENTER" />
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                <Tab text="Zestawienie liczby biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <LineChart fx:id="lineAmountYear" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </LineChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Zestawienie wartości biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <LineChart fx:id="lineCostYear" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </LineChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                               </tabs>
+                                                            </TabPane>
+                                                         </center></BorderPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab text="Statystyki miesiąca">
+                                                   <content>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <center>
+                                                            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                                              <tabs>
+                                                                <Tab text="Liczba biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <BarChart fx:id="barAmountMonth" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </BarChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Wartość biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <BarChart fx:id="barCostMonth" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </BarChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Liczba biletów [%]">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <PieChart fx:id="pieAmountMonth" BorderPane.alignment="CENTER" />
+                                                                           </center>
+                                                                           <left>
+                                                                              <ListView fx:id="listAmountMonth" prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                                                                           </left></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Wartość biletów [%]">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <PieChart fx:id="pieCostMonth" BorderPane.alignment="CENTER" />
+                                                                           </center>
+                                                                           <left>
+                                                                              <ListView fx:id="listCostMonth" prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+                                                                           </left></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                  <Tab text="Zestawienie liczby biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <LineChart fx:id="lineAmountMonth" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </LineChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                                <Tab text="Zestawienie wartości biletów">
+                                                                     <content>
+                                                                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <center>
+                                                                              <LineChart fx:id="lineCostMonth" BorderPane.alignment="CENTER">
+                                                                                <xAxis>
+                                                                                  <CategoryAxis side="BOTTOM" />
+                                                                                </xAxis>
+                                                                                <yAxis>
+                                                                                  <NumberAxis side="LEFT" />
+                                                                                </yAxis>
+                                                                              </LineChart>
+                                                                           </center></BorderPane>
+                                                                     </content>
+                                                                  </Tab>
+                                                              </tabs>
+                                                            </TabPane>
+                                                         </center></BorderPane>
+                                                   </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </center></BorderPane>
+                                 </items>
+                              </SplitPane>
+                           </content></Tab>
+                    </tabs>
+                  </TabPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

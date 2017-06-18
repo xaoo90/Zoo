@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keeper.animalFeed.AnimalFeedFXML">
+   <top>
+      <Label prefHeight="31.0" text="Karmienie zwierząt" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="tableAnimalFeed" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="feedAnimal" prefWidth="118.0" text="Zwierze" />
+          <TableColumn fx:id="feedFeed" prefWidth="135.0" text="Nazwa pożywienia" />
+            <TableColumn fx:id="feedPortion" prefWidth="69.0" text="Porcja" />
+            <TableColumn fx:id="feedTime" prefWidth="118.0" text="Pora karmienia" />
+            <TableColumn fx:id="feedFrequency" prefWidth="172.0" text="Częstotliwość karmienia" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#feed" text="Nakarm zwierzę" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

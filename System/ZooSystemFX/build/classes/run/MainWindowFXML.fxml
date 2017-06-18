@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="run.MainWindowFXML">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="246.0" layoutY="20.0" mnemonicParsing="false" onAction="#loginWindow" prefHeight="200.0" prefWidth="200.0" text="Logowanie" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <Button layoutY="20.0" mnemonicParsing="false" onAction="#showTodaySchedule" prefHeight="200.0" prefWidth="200.0" text="Grafik na dziś" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="run.TodayScheduleFXML">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="33.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="33.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="33.0" layoutY="324.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="273.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="513.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="753.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="273.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="513.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="753.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="120.0" layoutX="273.0" layoutY="324.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Separator layoutX="55.0" layoutY="40.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="1.0" />
+            <Separator layoutX="34.0" layoutY="59.0" prefHeight="4.0" prefWidth="924.0" />
+            <Separator layoutX="33.0" layoutY="200.0" prefHeight="4.0" prefWidth="922.0" />
+            <Separator layoutX="295.0" layoutY="40.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="1.0" />
+            <Separator layoutX="34.0" layoutY="349.0" prefHeight="4.0" prefWidth="924.0" />
+            <Separator layoutX="536.0" layoutY="37.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="1.0" />
+            <Separator layoutX="777.0" layoutY="34.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="1.0" />
+            <GridPane layoutX="34.0" layoutY="31.0" prefHeight="447.0" prefWidth="953.0">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <VBox fx:id="vKeeperA1" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Opiekun Ssaki A1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <center>
+                        <VBox fx:id="vKeeperA2A3" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Opiekun Ssaki A2/A3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <center>
+                        <VBox fx:id="vKeeperB1B2" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Opiekun Ptaki B1/B2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                     <center>
+                        <VBox fx:id="vKeeperC1C2" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Opiekun Gady C1/C2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <center>
+                        <VBox fx:id="vKeeperD1D2" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Opiekun Płazy D1/D2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <center>
+                        <VBox fx:id="vKeeperE1E2" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Opiekun Ryby E1/E2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <center>
+                        <VBox fx:id="vKeeperF1" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Opiekun Bezkregowce F1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <center>
+                        <VBox fx:id="vVeterinarian" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Weterynarz">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <center>
+                        <VBox fx:id="vWarehousemen" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Magazynier">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane layoutX="10.0" layoutY="236.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <center>
+                        <VBox fx:id="vSellar" alignment="CENTER" prefHeight="65.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="24.0" spacing="25.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="45.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                     <top>
+                        <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Kasjer">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="24.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="1 - pierwsza zmian" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="2 - druga zmiana  " textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblToday">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
